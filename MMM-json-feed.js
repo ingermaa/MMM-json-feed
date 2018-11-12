@@ -13,6 +13,8 @@ Module.register("MMM-json-feed", {
     values: [],
     replaceName: [],
     arrayName: "",
+    valueSuffix: "",
+    showOnlyValue: false,
   },
 
   start: function() {
@@ -118,7 +120,7 @@ Module.register("MMM-json-feed", {
       name = name.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     }
 
-    row.innerHTML = name + ": " + JSON.stringify(value);
+    row.innerHTML = (this.config.showOnlyValue ? "" : name + ": ") + JSON.stringify(value) + (this.config.valueSuffix !== "" ? (" " + this.config.valueSuffix) : "");
     return row;
   },
 

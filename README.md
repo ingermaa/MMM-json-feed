@@ -52,7 +52,10 @@ modules: [
 | `updateInterval`     | The time between updates (In milliseconds). <br><br> **Default value:** `300000 (5 minutes)`
 | `values`             | Specify specific values from the json feed to only show what you need. <br><br>**Example:** `["key1", "key2", "keyA.keyB.keyC"]`<br> **Default value:** `[]` (Shows all keys in the object)
 | `arrayName`          | Name of array of items to iterate through.<br><br> **Default value:** `undefined`
-| `replaceName`        | Specify key names to replace in the json. This is an array of arrays [find, replace]<br><br>**Example:** `[ ["body", "replaced body"], ["id", "replacedID"] ]`<br>
+| `replaceName`        | Specify key names to replace in the json. This is an array of arrays [find, replace]<br><br>**Example:** `[ ["body", "replaced body"], ["id", "replacedID"] ]
+| `valueSuffix`        | Specify text to be shown after value <br><br>**Example:** `watt` will print value `Name: value watt`.<br> **Default value:** ``
+| `showOnlyValue`      | Only show the value without the name <br><br>**Default value:** `false`
+<br>
 
 ## Using an Array of Data and Custom Parsing
 You can use the new config `arrayName` to parse through an array and then add parts from each object.
